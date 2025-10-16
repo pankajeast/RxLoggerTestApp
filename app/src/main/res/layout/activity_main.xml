@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGrey"
+    tools:context="com.example.rxappopstestapp.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <TextView
+                android:id="@+id/toolbar_text_main_activity"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="@string/app_name" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/get_rxlogger_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/get_rxlogger_state"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+
+<!--
+            <RadioButton
+                android:id="@+id/radio_option1_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button_selector"
+                android:layout_marginEnd="10dp"
+                />
+            <RadioButton
+                 android:id="@+id/radio_option2_start"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:button="@drawable/radio_button_selector"
+                 />-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- First Row, Start RxLogger -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/start_rxlogger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/start_rxlogger"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_option1_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                    android:layout_marginEnd="10dp"
+                    />
+
+            <!-- <RadioButton
+                 android:id="@+id/radio_option2_start"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:button="@drawable/radio_button_selector"
+                 />-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- Second Row, Stop RxLogger -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/stop_rxlogger"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/stop_rxlogger"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_option1_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                    android:layout_marginEnd="10dp"
+                     />
+
+                <!-- <RadioButton
+                    android:id="@+id/radio_option2_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                     />-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- Third Row, Backup now -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/backup_rxlogger_logs"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/backup_now_rx"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+
+            <RadioButton
+                android:id="@+id/radio_option1_backup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button_selector"
+                android:layout_marginEnd="10dp"
+                />
+
+            <!-- <RadioButton
+                android:id="@+id/radio_option2_backup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button_selector"
+                />-->
+        </LinearLayout>
+
+        <!-- Third Row, Backup now -->
+<!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/copy_rxlogger_logs"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/copy_logs_user_10"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_option1_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                    android:layout_marginEnd="10dp"
+                     />
+
+                <RadioButton
+                    android:id="@+id/radio_option2_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                     />
+        </LinearLayout>
+-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- Generate Rx Bugreport -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/generate_rx_bugreport"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/generate_rx_bugreport"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/radio_option1_bugreport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <!--<RadioButton
+                    android:id="@+id/radio_option2_bugreport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                     />-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- Delete Rx Logs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/delete_rx_logs"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/delete_logs"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/radio_option1_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <!--<RadioButton
+                    android:id="@+id/radio_option2_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                     />-->
+        </LinearLayout>
+
+        <!-- reset to default -->
+<!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/reset_to_default"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/reset_to_default"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/radio_option1_reset_to_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button_selector"
+                android:layout_marginEnd="10dp"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_option2_reset_to_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button_selector"
+                />
+        </LinearLayout>
+-->
+
+        <!-- deploy config -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/deploy_config"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/deploy_config"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/radio_option1_deploy_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button_selector"
+                android:layout_marginEnd="10dp"
+                />
+
+            <!--<RadioButton
+                android:id="@+id/radio_option2_deploy_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button_selector"
+                />-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/asset_select"
+            android:padding="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/reset_to_default"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:layout_marginEnd="8dp"
+                android:text="@string/reset_to_default"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/radio_option1_reset_to_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button_selector"
+                android:layout_marginEnd="10dp"
+                />
+
+            <!--<RadioButton
+                android:id="@+id/radio_option2_deploy_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button_selector"
+                />-->
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- New TextView -->
+        <TextView
+            android:id="@+id/status_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Action: \nStatus: \nMessage:"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:gravity="start" />
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

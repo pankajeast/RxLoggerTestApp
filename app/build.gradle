@@ -1,0 +1,49 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.zebra.rxloggertestapp'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.zebra.rxloggertestapp"
+        minSdk 30
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+        archivesBaseName = "RxCopeModeTestApp-$versionName"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "${archivesBaseName}.apk"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    // Enable AIDL support
+    buildFeatures {
+        aidl true
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

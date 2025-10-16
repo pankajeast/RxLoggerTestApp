@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="com.zebra.permission.ACCESS_RXLOGGER" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/rx_cope_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/rx_cope_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31" >
+    <activity
+        android:name="com.zebra.rxloggertestapp.MainActivity"
+        android:screenOrientation="portrait"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <receiver android:name="com.zebra.rxloggertestapp.RxBroadcastReceiver"
+        android:directBootAware="true"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="com.symbol.rxlogger.intent.action.GET_RX_STATE_STATUS" />
+            <action android:name="com.symbol.rxlogger.intent.action.ENABLE_STATUS" />
+            <action android:name="com.symbol.rxlogger.intent.action.DISABLE_STATUS" />
+            <action android:name="com.symbol.rxlogger.intent.action.BACKUP_NOW_STATUS" />
+            <action android:name="com.symbol.rxlogger.intent.action.DELETE_LOGS_STATUS" />
+            <action android:name="com.symbol.rxlogger.intent.action.RX_BUGREPORT_STATUS" />
+            <action android:name="com.symbol.rxlogger.intent.action.DEPLOY_CONFIG_STATUS" />
+        </intent-filter>
+    </receiver>
+
+    </application>
+</manifest>

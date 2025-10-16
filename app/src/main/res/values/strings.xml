@@ -1,0 +1,61 @@
+<resources>
+    <string name="versionName">1.0</string>
+
+    <string name="app_name">RXCopeModeTestApp</string>
+    <string name="app_name_old">RxLoggerVerifyApp</string>
+    <string name="rx_new_activity">RxLogger</string>
+    <string name="rxlogger_version">RxLoggerVerifyApp</string>
+    <string name="app_name_updated">RxVerify</string>
+    <string name="delete_logs">Delete Logs</string>
+    <string name="delete_rx_logs">Delete RxLogger Logs</string>
+    <string name="rx_running_not_allowed_to_delete_rx_logs">RxLogger Running state now allowed to delete logs</string>
+    <string name="rx_running">RxLogger already running</string>
+    <string name="generate_rx_bugreport">Generate Bugreport</string>
+    <string name="stop_rxlogger">Stop RxLogger</string>
+    <string name="backup_now_rx">Backup Now</string>
+    <string name="copy_logs_user_10">Copy logs</string>
+    <string name="ack_rxlogger_running">Ack RxLogger started</string>
+    <string name="about">About</string>
+    <string name="start_rxlogger">Start RxLogger</string>
+    <string name="reset_to_default">Reset to Default</string>
+    <string name="deploy_config">Deploy Config</string>
+    <string name="rx_ui">New RxLogger UI</string>
+    <string name="not_allowed_in_non_secure_str">Not allowed in non-secure mode</string>
+    <string name="password_strength_str">"Password must be at least 8 characters long, include an uppercase letter, a lowercase letter, a number, and a special character.</string>
+    <string name="enter_password_heading">"Enter Password"</string>
+    <string name="enter_password_desc">"Please enter password for the backup:"</string>
+    <string name="cancel_str">"Cancel"</string>
+    <string name="ok_str">"Ok"</string>
+    <string name="password_input_cancel">"Password input cancelled"</string>
+    <string name="broadcast_password">"password"</string>
+    <string name="broadcast_keep_a_copy">"keep_a_copy"</string>
+    <string name="intent_status">status</string>
+    <string name="intent_result">result</string>
+    <string name="intent_error_code">error_code</string>
+    <string name="intent_status_success">success</string>
+    <string name="intent_status_failed">failed</string>
+    <string name="intent_message">message</string>
+    <string name="intent_filepath">filepath</string>
+    <string name="intent_delete_log_type">type</string>
+    <string name="textview_status_enable_rx">RxLogger ENABLE</string>
+    <string name="textview_status_disable_rx">RxLogger DISABLE</string>
+    <string name="textview_status_backupnow_rx">BACKUP NOW</string>
+    <string name="textview_status_delete_logs_rx">DELETE LOGS</string>
+    <string name="textview_status_bugreport_rx">BUGREPORT</string>
+    <string name="textview_status_deploy_config_rx">DEPLOY CONFIG</string>
+    <string name="textview_status_rx_state">RxLogger STATE</string>
+    <string name="textview_status_reset_to_default">RESET TO DEFAULT</string>
+    <string name="get_rxlogger_state">Get RxLogger State</string>
+    <string name="intent_rx_state_code">rx_state</string>
+    <string name="intent_rx_state_msg">rx_state_msg</string>
+
+    <string-array name="multichoice">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Cyan</item>
+        <item>Blue</item>
+        <item>Purple</item>
+    </string-array>
+</resources>
