@@ -2,12 +2,31 @@
 
 This application serves as an integration reference to showcase how to:
 
-1. Use sending intents to send commands to the RxLogger module.
+1. Send commands to the RxLogger module using intents.
 2. Receive intents using a broadcast receiver and view the results of the sent commands.
 
 ## Permissions
 
 To use this functionality, the app requires the following permission:
+
+```xml
+<uses-permission android:name="com.zebra.permission.ACCESS_RXLOGGER" />
+```
+
+## Grant Permission
+
+To grant ACCESS_RXLOGGER permission, create MXMF xml file using the following snippet and submit on device:
+
+```xml
+<wap-provisioningdoc>
+  <characteristic version="14.2" type="AccessMgr">
+    <parm name="PermissionAccessAction" value="1" />
+    <parm name="PermissionAccessPermissionName" value="com.zebra.permission.ACCESS_RXLOGGER" />
+    <parm name="PermissionAccessPackageName" value="com.zebra.rxcopemodetestapp" />
+    <parm name="PermissionAccessSignature" value="application_Signature" />
+  </characteristic>
+</wap-provisioningdoc>
+```
 
 ```xml
 <uses-permission android:name="com.zebra.permission.ACCESS_RXLOGGER" />
