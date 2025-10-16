@@ -24,7 +24,7 @@ To grant ACCESS_RXLOGGER permission, create MXMF xml file using the following sn
   <characteristic version="14.2" type="AccessMgr">
     <parm name="PermissionAccessAction" value="1" />
     <parm name="PermissionAccessPermissionName" value="com.zebra.permission.ACCESS_RXLOGGER" />
-    <parm name="PermissionAccessPackageName" value="com.zebra.rxcopemodetestapp" />
+    <parm name="PermissionAccessPackageName" value="com.zebra.rxloggertestapp" />
     <parm name="PermissionAccessSignature" value="application_Signature" />
   </characteristic>
 </wap-provisioningdoc>
@@ -38,6 +38,27 @@ Ensure this file uses, target apk's packageName & signature for `PermissionAcces
 2. **Receiving Results**: Implement a broadcast receiver to handle and display the results of the commands.
 
 Refer to the code for detailed implementation.
+
+## COPE Mode Requirements
+
+In COPE (Corporate Owned, Personally Enabled) mode, when sending intents to the RxLogger module, you must specify the component name to ensure the intent is properly delivered to the RxLogger receiver.
+
+**Required Component Details:**
+- **PACKAGE_NAME**: `com.symbol.rxlogger`
+- **CLASS_NAME**: `com.symbol.rxlogger.receiver.CopeModeReceiver`
+
+**Implementation Example:**
+
+```java
+Intent intent = new Intent();
+intent.setAction("com.zebra.rxlogger.intent.action.ENABLE_ZSX");
+intent.setComponent(new ComponentName(RX_PKG_NAME, RX_COMPONENT_NAME));
+sendBroadcast(intent);
+```
+
+Where:
+- `RX_PKG_NAME = "com.symbol.rxlogger"`
+- `RX_COMPONENT_NAME = "com.symbol.rxlogger.receiver.CopeModeReceiver"`
 
 ## Intents
 
@@ -64,4 +85,3 @@ Below is a list of all the intents that can be received via the broadcast receiv
 - **com.symbol.rxlogger.intent.action.RX_BUGREPORT_STATUS**: Broadcast result for generating a bug report.
 - **com.symbol.rxlogger.intent.action.DEPLOY_CONFIG_STATUS**: Broadcast result for deploying a new configuration to the RxLogger.
 - **com.symbol.rxlogger.intent.action.RESET_TO_DEFAULT_STATUS**: Broadcast result for resetting the RxLogger to its default configuration.
-

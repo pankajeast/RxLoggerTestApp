@@ -1,7 +1,7 @@
 <resources>
     <string name="versionName">1.0</string>
 
-    <string name="app_name">RXCopeModeTestApp</string>
+    <string name="app_name">RXLoggerTestApp</string>
     <string name="app_name_old">RxLoggerVerifyApp</string>
     <string name="rx_new_activity">RxLogger</string>
     <string name="rxlogger_version">RxLoggerVerifyApp</string>
