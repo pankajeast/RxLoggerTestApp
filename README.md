@@ -13,6 +13,8 @@ To use this functionality, the app requires the following permission:
 <uses-permission android:name="com.zebra.permission.ACCESS_RXLOGGER" />
 ```
 
+Ensure this permission is added to your `AndroidManifest.xml` file.
+
 ## Grant Permission
 
 To grant ACCESS_RXLOGGER permission, create MXMF xml file using the following snippet and submit on device:
@@ -28,11 +30,7 @@ To grant ACCESS_RXLOGGER permission, create MXMF xml file using the following sn
 </wap-provisioningdoc>
 ```
 
-```xml
-<uses-permission android:name="com.zebra.permission.ACCESS_RXLOGGER" />
-```
-
-Ensure this permission is added to your `AndroidManifest.xml` file.
+Ensure this file uses, target apk's packageName & signature for `PermissionAccessPackageName` & `PermissionAccessSignature`.
 
 ## Usage
 
