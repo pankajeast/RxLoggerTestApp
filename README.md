@@ -21,3 +21,19 @@ Ensure this permission is added to your `AndroidManifest.xml` file.
 2. **Receiving Results**: Implement a broadcast receiver to handle and display the results of the commands.
 
 Refer to the code for detailed implementation.
+
+## Intents
+
+### Sending Intents
+Below is a list of all the intents that can be sent to the RxLogger module:
+
+- **Intent 1**: `<intent details>`
+- **Intent 2**: `<intent details>`
+- Add more intents as applicable.
+
+### Broadcast Receiver Intents
+Below is a list of all the intents that can be received via the broadcast receiver:
+
+- **Intent 1**: `<intent details>`
+- **Intent 2**: `<intent details>`
+- Add more intents as applicable.
