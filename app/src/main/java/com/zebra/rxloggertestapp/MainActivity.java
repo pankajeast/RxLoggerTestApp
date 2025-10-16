@@ -17,7 +17,6 @@ import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Base64;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -356,7 +355,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 byte[] data = Base64.encode(sig.toByteArray(), Base64.DEFAULT);
                 String signature = new String(data, StandardCharsets.UTF_8);
                 callerSignature = signature.replaceAll("\\s+", "");
-                Log.d(TAG, "shivin::caller signature:" + callerSignature);
+                Log.d(TAG, "caller signature:" + callerSignature);
             }
         } catch (Exception e) {
             callerSignature = null;
@@ -389,7 +388,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Save the encoded string
         editor.putString(KEY_CERT_SIGNATURE, encodedString);
         editor.apply();
-        Log.d(TAG, "shivin::Signature saved to SharedPreferences.");
+        Log.d(TAG, "Signature saved to SharedPreferences.");
     }
 
 }
