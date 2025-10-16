@@ -27,13 +27,24 @@ Refer to the code for detailed implementation.
 ### Sending Intents
 Below is a list of all the intents that can be sent to the RxLogger module:
 
-- **Intent 1**: `<intent details>`
-- **Intent 2**: `<intent details>`
-- Add more intents as applicable.
+- **com.zebra.rxlogger.intent.action.GET_RX_STATE**: Retrieve the current state of the RxLogger.
+- **com.zebra.rxlogger.intent.action.ENABLE_ZSX**: Enable the RxLogger.
+- **com.zebra.rxlogger.intent.action.DISABLE_ZSX**: Disable the RxLogger.
+- **com.zebra.rxlogger.intent.action.BACKUP_NOW_ZSX**: Trigger an immediate backup of logs.
+- **com.zebra.rxlogger.intent.action.DEPLOY_CONFIG_ZSX**: Deploy a new configuration to the RxLogger.
+- **com.zebra.rxlogger.intent.action.DELETE_LOGS_ZSX**: Delete existing logs.
+- **com.zebra.rxlogger.intent.action.RX_BUGREPORT_ZSX**: Generate a bug report.
+- **com.zebra.rxlogger.intent.action.RESET_TO_DEFAULT_ZSX**: Reset the RxLogger to its default configuration.
 
 ### Broadcast Receiver Intents
 Below is a list of all the intents that can be received via the broadcast receiver:
 
-- **Intent 1**: `<intent details>`
-- **Intent 2**: `<intent details>`
-- Add more intents as applicable.
+- **com.symbol.rxlogger.intent.action.GET_RX_STATE_STATUS**: Broadcast result for retrieving the current state of the RxLogger.
+- **com.symbol.rxlogger.intent.action.ENABLE_STATUS**: Broadcast result for enabling the RxLogger status.
+- **com.symbol.rxlogger.intent.action.DISABLE_STATUS**: Broadcast result for disabling the RxLogger status.
+- **com.symbol.rxlogger.intent.action.BACKUP_NOW_STATUS**: Broadcast result for triggering an immediate backup of logs.
+- **com.symbol.rxlogger.intent.action.DELETE_LOGS_STATUS**: Broadcast result for deleting existing logs.
+- **com.symbol.rxlogger.intent.action.RX_BUGREPORT_STATUS**: Broadcast result for generating a bug report.
+- **com.symbol.rxlogger.intent.action.DEPLOY_CONFIG_STATUS**: Broadcast result for deploying a new configuration to the RxLogger.
+- **com.symbol.rxlogger.intent.action.RESET_TO_DEFAULT_STATUS**: Broadcast result for resetting the RxLogger to its default configuration.
+
