@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.zebra.rxcopemodetestapp",
+  "applicationId": "com.zebra.rxloggertestapp",
   "variantName": "release",
   "elements": [
     {
