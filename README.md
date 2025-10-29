@@ -35,10 +35,10 @@ Ensure this file uses, target apk's packageName & signature for `PermissionAcces
 **ADB Command**: Alternatively, you can grant the permission using the following ADB command:
 
 ```bash
-**Device Owner User (User 0)**
+Device Owner User (User 0)
 adb shell appops set com.zebra.rxcopemodetestapp ACCESS_RXLOGGER allow
 
-**COPE Mode User (User 10)**
+COPE Mode User (User 10)
 adb shell appops set --user 10 com.zebra.rxcopemodetestapp ACCESS_RXLOGGER allow
 ```
 
